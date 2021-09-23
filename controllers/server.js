@@ -8,7 +8,7 @@ const budget = require('../models/budget.js');
 // INDEX
 // app.get
 app.get('/budget', (req, res) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {budgetTable: budget});
 });
 
 // NEW

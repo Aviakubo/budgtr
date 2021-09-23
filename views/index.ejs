@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budgtr</title>
-    <link rel="stylesheet" href="../public/normalize.css">
-<link rel="stylesheet" href="../public/skeleton.css">
+    <link rel="stylesheet" href="/public/normalize.css">
+    <link rel="stylesheet" href="/public/skeleton.css">
 </head>
 <body>
 
@@ -15,6 +15,17 @@
     <div class="container">
 
     </div>
+
+    <table>
+        <% for(let i=0; i < budgetTable.length; i++) { %>
+            <tr>
+                <td> <%= budgetTable[i].date %> </td>
+                <td> <%= budgetTable[i].name %> </td>
+                <td> <%= budgetTable[i].amount %> </td>
+            </tr>
+        <% } %>
+    </table>
+        
     
 </body>
 </html>
