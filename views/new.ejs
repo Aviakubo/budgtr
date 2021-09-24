@@ -9,22 +9,24 @@
     <link rel="stylesheet" href="/skeleton.css">
 </head>
 <body>
+<div class="container">
+    
+    <h1>Add New Item</h1>
 
-    <div class="container">
+            <table>
 
-    <h1>Budgtr ALL</h1>
-
-    <table>
-        <% for(let i=0; i < budgetTable.length; i++) { %>
             <tr>
-                <td> <%= budgetTable[i].date %> </td>
-                <td> <a href ="/budget/<%= i %>" ><%= budgetTable[i].name %> </a> </td>
-                <td> <%= budgetTable[i].amount %> </td>
+        <td><input placeholder="date"></input></td>
+        <td><input placeholder="name"></input></td>
             </tr>
-        <% } %>
-    </table>
-    
-    </div>
-    
+            <tr>
+        <td><input placeholder="amount"></input></td>
+        <td><input placeholder="from"></input></td>
+            </tr>
+            </table>
+
+    <button>Create New Item</button>
+
+</div>
 </body>
 </html>

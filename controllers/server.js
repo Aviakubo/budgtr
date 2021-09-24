@@ -4,6 +4,7 @@ const app = express();
 const port = 3000;
 const budget = require('../models/budget.js');
 
+var bodyParser = require('body-parser');
 app.use(express.static('public'));
 
 // INDEX
@@ -15,7 +16,7 @@ app.get('/budget', (req, res) => {
 // NEW
 // app.get
 app.get('/budget/new', (req, res) => {
-    res.send('this should be the new');
+    res.render('new.ejs');
 });
 
 // CREATE
