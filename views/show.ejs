@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/normalize.css">
-    <link rel="stylesheet" href="/public/skeleton.css">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
     <title>Budgtr Show</title>
 </head>
 <body>
-    <h1>name of item</h1>
+    <h1> <%= budgetTable.name %> </h1>
 
     <div class="container">
 
     </div>
-
-    <a>
+    <a href="/budget">
         <button>Back to Main</button>
     </a>
+    <br>
+    <p>
+    <h5> Date </h5>
+    <%= budgetTable.date %>
+    <h5> Name </h5>
+    <%= budgetTable.name %>
+    <h5> From </h5>
+    <%= budgetTable.from %>
+    <h5> Amount </h5>
+    <%= budgetTable.amount %>
+    <h5> Tags </h5>
+    <%= budgetTable.tags %> 
+    </p>
+
 </body>
 </html>

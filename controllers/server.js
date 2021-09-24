@@ -2,8 +2,9 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-
 const budget = require('../models/budget.js');
+
+app.use(express.static('public'));
 
 // INDEX
 // app.get
@@ -23,7 +24,9 @@ app.get('/budget/new', (req, res) => {
 // SHOW
 // app.get
 app.get('/budget/:indexOfBudgetArray', (req,res) => {
-    res.send('this should be the show page');
+    res.render('show.ejs', {
+        budgetTable: budget[req.params.indexOfBudgetArray]
+    });
 });
 
 // Express Web Server port - app.listen
