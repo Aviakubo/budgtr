@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +9,29 @@
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/skeleton.css">
 </head>
+
 <body>
-<div class="container">
-    
-    <h1>Add New Item</h1>
+    <div class="container">
 
-            <table>
+        <h1>Add New Item</h1>
 
-            <tr>
-        <td><input placeholder="date"></input></td>
-        <td><input placeholder="name"></input></td>
-            </tr>
-            <tr>
-        <td><input placeholder="amount"></input></td>
-        <td><input placeholder="from"></input></td>
-            </tr>
-            </table>
+        <table>
+            <form action="/budget" method="POST">
+                <tr>
+                    <td><input type="text" name="date" placeholder="date"></input></td>
+                    <td><input type="text" name="name" placeholder="name"></input></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="amount" placeholder="amount"></input></td>
+                    <td><input type="text" name="from" placeholder="from"></input></td>
+                </tr>
+                <tr>
+                    <td><button>Create New Item</button></td>
+                </tr>
+            </form>
+        </table>
 
-    <button>Create New Item</button>
-
-</div>
+    </div>
 </body>
+
 </html>

@@ -4,6 +4,7 @@ const app = express();
 const port = 3000;
 const budget = require('../models/budget.js');
 
+app.use(express.urlencoded({ extended:false}));
 var bodyParser = require('body-parser');
 app.use(express.static('public'));
 
@@ -21,6 +22,11 @@ app.get('/budget/new', (req, res) => {
 
 // CREATE
 // app.post
+app.post('/budget', (req, res) => {
+    console.log(req.body);
+    budget.push(req.body);
+    res.redirect('/budget');
+});
 
 // SHOW
 // app.get
